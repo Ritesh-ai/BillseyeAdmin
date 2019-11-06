@@ -1,0 +1,386 @@
+{%extends 'userinfo/base.html'%}
+{%load staticfiles %}
+    {% block body_block %}
+        <div class="wrapper">
+            <div class="sidebar">
+
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="#" class="simple-text">
+                            <!--<img src="assets/img/billseye/Billseye_icon.png" class="pull-left">-->
+                            <img src="{%static 'img/billseye/Billseye_icon.png'%}" class="pull-left">
+                            <span class="pull-left">Billseye</span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="dashboard.html">
+                                <!-- <i class="pe-7s-graph"></i> -->
+                                <!--<img src="assets/img/billseye/dashboard_icon.png">-->
+                                <img src="{%static 'img/billseye/dashboard_icon.png'%}">
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <!-- <i class="pe-7s-user"></i> -->
+                                <!--<img src="assets/img/billseye/profile_icon.png">-->
+                                <img src="{%static 'img/billseye/profile_icon.png'%}">
+                                <p>User Profile</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <!-- <i class="pe-7s-note2"></i> -->
+                                <!--<img src="assets/img/billseye/table_icon.png">-->
+                                <img src="{%static 'img/billseye/table_icon.png'%}">
+                                <p>Table List</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <!-- <i class="pe-7s-bell"></i> -->
+                                <!--<img src="assets/img/billseye/notification_icon.png">-->
+                                <img src="{%static 'img/billseye/notification_icon.png'%}">
+                                <p>Notifications</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <!-- <i class="pe-7s-bell"></i> -->
+                                <!--<img src="assets/img/billseye/FAQ_icon.png">-->
+                                <img src="{%static 'img/billseye/FAQ_icon.png'%}">
+                                <p>FAQ</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <!-- <i class="pe-7s-bell"></i> -->
+                                <!--<img src="assets/img/billseye/about_icon.png">-->
+                                <img src="{%static 'img/billseye/about_icon.png'%}">
+                                <p>About US</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-panel">
+                <nav class="navbar navbar-default navbar-fixed">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Dashboard</a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-globe"></i>
+                                        <b class="caret hidden-lg hidden-md"></b>
+                                        <p class="hidden-lg hidden-md">
+                                            5 Notifications
+                                            <b class="caret"></b>
+                                        </p>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Notification 1</a></li>
+                                        <li><a href="#">Notification 2</a></li>
+                                        <li><a href="#">Notification 3</a></li>
+                                        <li><a href="#">Notification 4</a></li>
+                                        <li><a href="#">Another notification</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                   <a href="">
+                                        <i class="fa fa-search"></i>
+                                        <p class="hidden-lg hidden-md">Search</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                   <a href="">
+                                       <p>Account</p>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <p>
+                                            Dropdown
+                                            <b class="caret"></b>
+                                        </p>
+
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">xyz</a></li>
+                                        <li><a href="#">xyz</a></li>
+                                        <li><a href="#">xyz</a></li>
+                                        <li><a href="#">xyz</a></li>
+                                        <li><a href="#">xyz</a></li>
+                                        <!-- <li class="divider"></li> -->
+                                        <li><a href="#">xyz</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{%url 'userinfo:user_logout'%}">
+                                        <p>Log out</p>
+                                    </a>
+                                </li>
+                                <li class="separator hidden-lg"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+
+                <section class="">
+                    <div class="container-fluid">
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 remove">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/phone-book.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/phone-book.png'%}" class="pull-left">
+                                            <span class="pull-left">Contacts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 remove">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/phone.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/phone.png'%}" class="pull-left">
+                                            <span class="pull-left">Call Logs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 remove">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/email.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/email.png'%}" class="pull-left">
+                                            <span class="pull-left">Message</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 header2 remove Active">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/charts.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/charts.png'%}" class="pull-left">
+                                            <span class="pull-left">Line Graph</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 header2 remove">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/graph.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/graph.png'%}" class="pull-left">
+                                            <span class="pull-left">Bar Graph</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="header1 header2 remove">
+                                        <div class="clearfix">
+                                            <!--<img src="assets/img/billseye/pie-chart1.png" class="pull-left">-->
+                                            <img src="{%static 'img/billseye/pie-chart1.png'%}" class="pull-left">
+                                            <span class="pull-left">Pie Chart</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <div class="">
+                    <div class="container-fluid">
+                        <!-- *****************line graph******************** -->
+                        <div class="row">
+                            <div class="show1">
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <!-- <div class="header">
+                                            <h4 class="title">Users Behavior</h4>
+                                            <p class="category">24 Hours performance</p>
+                                        </div> -->
+                                        <div class="content">
+                                            <div id="chartHours" class="ct-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cart1">
+                                        <div class="content">
+                                            <div class="footer">
+                                                <div class="legend">
+                                                    <div>
+                                                        <i class="fa fa-circle text-info"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                    <br>
+                                                    <div>
+                                                        <i class="fa fa-circle text-danger"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                    <br>
+                                                    <div>
+                                                        <i class="fa fa-circle text-warning"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- *****************line graph******************** -->
+
+                        <!-- *****************bar graph******************** -->
+                        <div class="row">
+                            <div class="hide1">
+                                <div class="col-md-8">
+                                    <div class="card ">
+                                        <!-- <div class="header">
+                                            <h4 class="title">2014 Sales</h4>
+                                            <p class="category">All products including Taxes</p>
+                                        </div> -->
+                                        <div class="content">
+                                            <div id="chartActivity" class="ct-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card cart1">
+                                        <div class="content">
+                                            <div class="footer">
+                                                <div class="legend">
+                                                    <div>
+                                                        <i class="fa fa-circle text-info"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                    <br>
+                                                    <div>
+                                                        <i class="fa fa-circle text-danger"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- *****************bar graph******************** -->
+
+                        <!-- *****************pie chart******************** -->
+                        <div class="row">
+                            <div class="hide1">
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <!-- <div class="header">
+                                            <h4 class="title">Email Statistics</h4>
+                                            <p class="category">Last Campaign Performance</p>
+                                        </div> -->
+                                        <div class="content">
+                                            <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card cart1">
+                                        <div class="content">
+                                            <div class="footer">
+                                                <div class="legend">
+                                                    <div>
+                                                        <i class="fa fa-circle text-info"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                    <br>
+                                                    <div>
+                                                        <i class="fa fa-circle text-danger"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                    <br>
+                                                    <div>
+                                                        <i class="fa fa-circle text-warning"></i>
+                                                        <div>xyz</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- *****************pie chart******************** -->
+                    </div>
+                </div>
+
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <nav class="pull-left">
+                            <!-- <ul>
+                                <li>
+                                    <a href="#">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Company
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Portfolio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                       Blog
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </nav>
+                        <p class="copyright text-center">copyright @ 2018, Billseye. All Rights Reserved</p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    {% endblock %}

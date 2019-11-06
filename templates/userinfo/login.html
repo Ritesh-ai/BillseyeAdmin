@@ -1,0 +1,51 @@
+{% extends 'userinfo/base.html'%}
+{%load staticfiles %}
+    {% block body_block %}
+        <div class="wrapper">
+            <div class="">
+                <!-- Modal -->
+                    <div class="modal_login" id="Login" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                            <div class="modal-content">
+                                <!--<div class="modal-header">-->
+                                        <div class="modal-header text-center login_msg_conform">
+                                 <img src="/static/img/billseye/Billseye_icon.png">
+                                                                        <h4 class="modal-title text-center">Login</h4>
+                                    <!--</div>-->
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group label_input">
+                                            <label for="username">Username : </label>
+                                            <input type="text" class="form-control" name="username">
+                                        </div>
+                                        <div class="form-group label_input">
+                                            <label for="password">Password : </label>
+                                            <input type="password" class="form-control" name="password">
+                                        </div>
+                                        <div class="form-group form-group1">
+                                            <a href="#">Forgot Password?</a>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <!--<button class="btn btn-danger1">Login</button>-->
+                                            <input type="submit" value="Login" class="btn btn-danger1">
+                                        </div>
+                                        <div class="form-group pull-right form-group2">
+                                            <p>
+                                                If you don't have an account &nbsp;
+                                                <a href="{% url 'userinfo:register'%}">Sign Up</a>
+                                            </p>
+                                        </div>
+                                        <div class="cleafix"></div>
+                                        <br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    {% endblock %}

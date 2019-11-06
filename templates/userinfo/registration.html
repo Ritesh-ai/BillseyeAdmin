@@ -1,0 +1,79 @@
+{% extends 'userinfo/base.html'%}
+   {% load staticfiles %}
+        {% block body_block%}
+            <div class="wrapper">
+                <div class="">
+                    <!-- Modal -->
+                    <div class="modal_login">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-center">Register</h4>
+                                </div>
+                                <div class="modal-body">
+                                        {% if registered %}
+                                            <h1>Thank You for Register!</h1>
+                                        {% else %}
+                                            <form method="POST" enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>First Name</label>
+                                                                {{ user_form.first_name }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>Last Name</label>
+                                                                {{ user_form.last_name }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>Username</label>
+                                                                {{ user_form.username }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>Email Address</label>
+                                                                {{ user_form.email }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>Password</label>
+                                                                {{ user_form.password }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group label_input">
+                                                            <label>Confirm Password</label>
+                                                                {{ user_form.confirm_password }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br/>
+                                                <div class="form-group text-center">
+                                                <input type="submit" class="btn btn-danger1" value="Register">
+                                                </div>
+                                            </form>
+                                    <div class="form-group pull-right form-group2">
+                                        <p>
+                                            Already have an account ? &nbsp;
+                                            <a href="{% url 'userinfo:user_login'%}">Login</a>
+                                        </p>
+                                    </div>
+                                    <div class="cleafix"></div>
+                                    <br>
+                                </form>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

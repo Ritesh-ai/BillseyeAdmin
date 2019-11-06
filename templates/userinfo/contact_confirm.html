@@ -1,0 +1,38 @@
+{%extends 'userinfo/base.html'%}
+    {% block body_block %}
+
+
+         <div class="wrapper">
+             <div class="">
+                 <div class="modal_login" id="Login" role="dialog">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header text-center login_msg_conform">
+                                 <img src="/static/img/billseye/Billseye_icon.png">
+                             </div>
+                             <div class="modal-body text-center login_msg_conform">
+
+                                  <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group label_input">
+                                            <label for="OTP" class="otp_verification">Enter Your Otp Number </label>
+                                            <div>
+                                                <input type="text" class="otpinput" name="OTP" placeholder="000000">
+                                            </div>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="submit" value="Confirm" class="btn btn-danger1">
+                                        </div>
+                                        <div class="cleafix"></div>
+                                        <br>
+                                    </form>
+                                 <!--<h3>Lorem Ipsum Lorem Ipsum Lorem Ipsum</h3> -->
+                                 <!--<br> -->
+                                 <!--<button class="btn btn-danger1">OK</button>-->
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    {% endblock %}

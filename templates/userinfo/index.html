@@ -1,0 +1,71 @@
+{% extends 'userinfo/base.html'%}
+{%load staticfiles %}
+    {% block body_block %}
+        <div class="wrapper">
+            <div class="">
+                <section class="bg_homepage">
+                    <nav class="navbar navbar-default navbar-fixed">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">
+                                    <!--<img src="assets/img/billseye/Billseye_icon.png" class="pull-left">-->
+                                    <img src="{%static 'img/billseye/Billseye_icon.png'%}" class="pull-left">
+                                    <span class="pull-left">Billseye</span>
+                                </a>
+                            </div>
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="{% url 'userinfo:user_login'%}">
+                                           <p>Login</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'userinfo:register'%}">
+                                           <p>Sign Up</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+                <footer class="footer footer1">
+                    <div class="container-fluid">
+                        <nav class="pull-left">
+                            <!-- <ul>
+                                <li>
+                                    <a href="#">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Company
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Portfolio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                       Blog
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </nav>
+                        <p class="copyright text-center">copyright @ 2018, Billseye. All Rights Reserved</p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    {% endblock %}

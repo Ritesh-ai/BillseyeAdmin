@@ -1,0 +1,26 @@
+{% extends 'userinfo/base.html' %}
+{% load staticfiles %}
+{%block body_block %}
+<div class="wrapper">
+    <div class="">
+        <!-- Modal -->
+            <div class="modal_login" id="Login" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header text-center login_msg_conform">
+                            <!--<img src="assets/img/billseye/Billseye_icon.png">-->
+                            <img src="{%static 'img/billseye/Billseye_icon.png'%}">
+                        </div>
+                        <div class="modal-body text-center login_msg_conform">
+                            <h3>Please confirm your email address to complete the registration.</h3>
+                            <br>
+                            <button class="btn btn-danger1"><a href="{% url 'userinfo:user_login'%}">LOGIN</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
